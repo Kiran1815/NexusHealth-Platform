@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: nexus-health
+    env: node
+    region: oregon
+    plan: free
+    rootDir: .
+    buildCommand: "cd nexus-health-frontend && npm install && npm run build && cd ../nexus-health-backend && npm install"
+    startCommand: "node nexus-health-backend/src/server.js"
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: PORT
+        value: 10000

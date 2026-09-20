@@ -1,0 +1,14 @@
+{
+  "name": "nexus-health-platform",
+  "version": "1.0.0",
+  "description": "NEXUS HEALTH — AI-Native Healthcare Platform (monorepo root)",
+  "scripts": {
+    "build": "cd nexus-health-frontend && npm install && npm run build",
+    "start": "cd nexus-health-backend && npm install && node src/server.js",
+    "dev:backend": "cd nexus-health-backend && node src/server.js",
+    "dev:frontend": "cd nexus-health-frontend && npm run dev"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
